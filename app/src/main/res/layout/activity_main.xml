@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E0E4D2"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:elevation="@dimen/_40sdp"
+        android:src="@drawable/ic_menu_black_24dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_height="@dimen/_40sdp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/rinuu"
+        android:id="@+id/image"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="              Stop Killing Us!\n    Let Our Voices be Heard!"
+                android:textColor="#fff"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/endTxt"
+                android:elevation="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_55sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textSize="@dimen/_20sdp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/endTxt"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_45sdp"
+                android:text="#EndSars"
+                android:textColor="#C40505"
+                android:textStyle="bold"
+                android:elevation="@dimen/_45sdp"
+                android:id="@+id/endTxt2"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerview"
+                android:layout_below="@+id/endTxt2"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/tool_bar"
+        android:title="#EndSars"
+
+        android:background="#000"
+        android:titleTextColor="#fff"
+       android:elevation="@dimen/_15sdp"
+        android:navigationIcon="@drawable/ic_close_black_24dp"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/search_img"
+        android:layout_width="wrap_content"
+        android:elevation="@dimen/_45sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_search_black_24dp"
+        android:layout_height="wrap_content"/>
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:id="@id/search_view"
+        android:visibility="gone"
+        android:focusedByDefault="true"
+        android:queryHint="Search Name/State"
+        android:iconifiedByDefault="false"
+        android:layout_height="wrap_content"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/nested"
+        android:layout_below="@+id/search_view"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerview"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
